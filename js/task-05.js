@@ -11,10 +11,10 @@ nameInputRef.addEventListener('input', addInput);
 
 function addInput(event) {
     if (event.target.value === '') {
-        return "Anonymous";
+        nameOutputRef.textContent = "Anonymous";
     } else {
         nameOutputRef.textContent = event.target.value;
-    }
+    }     
 };
 
 // ================================тернарный===========================================

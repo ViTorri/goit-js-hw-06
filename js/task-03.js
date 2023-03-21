@@ -31,11 +31,13 @@ const images = [
 
 const imgGalleryRef = document.querySelector('.gallery');
 
-images.forEach(image => {
-  const item = `
-    <li class="gallery-item">
+const items = images.map(image => 
+    `<li class="gallery-item">
       <img src="${image.url}" alt="${image.alt}">
-    </li>`;
-  imgGalleryRef.insertAdjacentHTML('beforeend', item);
-});
+    </li>`).join('');
+
+imgGalleryRef.insertAdjacentHTML('beforeend', items);
+
+
+
 
